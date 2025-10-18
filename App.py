@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 # ----------------------------------
 @st.cache_data
 def load_data():
-    iris_data = pd.read_csv("C:/Users/user/Downloads/Iris.csv")
+    iris_data = pd.read_csv("Iris.csv")
     label_encoder = LabelEncoder()
     iris_data['Species'] = label_encoder.fit_transform(iris_data['Species'])
     return iris_data, label_encoder
